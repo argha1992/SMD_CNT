@@ -1,5 +1,5 @@
 define                   = -DBILAYER_LIPIDHEAD_FC=2
-integrator               = sd
+integrator               = md
 tinit                    = 0.0
 dt                       = 0.02
 ;nsteps                   = 50000000 ;1microsec
