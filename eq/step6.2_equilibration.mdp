@@ -1,5 +1,5 @@
 define                   = -DBILAYER_LIPIDHEAD_FC=200
-integrator              = sd
+integrator              = md
 dt                      = 0.001
 nsteps                   = 500000
 nstlog                   = 1000
@@ -20,7 +20,7 @@ vdw_type                 = cutoff
 vdw-modifier             = Potential-shift-verlet
 rvdw                     = 1.1
 ;
-tcoupl                  = berendsen
+tcoupl                  = v-rescale
 tc_grps                 = unk memb sol_ion
 tau_t                   = 1.0 1.0 1.0 
 ref_t                   = 310 310 310
