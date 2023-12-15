@@ -1,0 +1,34 @@
+define                   = -DBILAYER_LIPIDHEAD_FC=100
+integrator               = sd
+tinit                    = 0.0
+dt                       = 0.005
+nsteps                   = 200000
+
+nstlog                   = 1000
+nstenergy                = 1000
+nstxout-compressed       = 1000
+compressed-x-precision   = 1000
+
+cutoff-scheme            = Verlet
+nstlist                  = 20
+ns_type                  = grid
+pbc                      = xyz
+verlet-buffer-tolerance  = 0.005
+
+epsilon_r                = 15
+coulombtype              = reaction-field
+rcoulomb                 = 1.1
+vdw_type                 = cutoff
+vdw-modifier             = Potential-shift-verlet
+rvdw                     = 1.1
+
+tcoupl                   = v-rescale
+tc-grps                  = unk memb sol_ion
+tau_t                    = 1.0  1.0  1.0
+ref_t                    = 310 310 310
+
+; GENERATE VELOCITIES FOR STARTUP RUN:
+gen_vel                  = yes
+gen-temp                 = 310
+
+refcoord-scaling         = com
